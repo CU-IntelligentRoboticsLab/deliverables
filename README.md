@@ -1,37 +1,37 @@
-# Lab Open Projects
+# Open Deliverables
 
-This repo holds the lab's queue of open projects. Browse it on the **[project board](https://github.com/orgs/CU-IntelligentRoboticsLab/projects/1)**.
+What Lyle is working on for the lab, and when each piece is expected. The order on the **[board](https://github.com/orgs/CU-IntelligentRoboticsLab/projects/1)** is the priority order: the top of **Up next** is what gets picked up next.
 
-## Board columns
+## Reading the board
 
 | Column | Meaning |
 |---|---|
-| **Open** | Available. Anyone can claim it. |
-| **Claimed** | Someone has signed up but hasn't started yet. |
-| **In progress** | Being actively worked on. |
-| **Blocked** | Waiting on parts, a decision, or help. |
-| **Done** | Finished. |
+| **Up next** | Committed to and queued, top first. |
+| **In progress** | Being worked on now. |
+| **Waiting on others** | Paused on parts, information or a decision from someone else. |
+| **Done** | Delivered. |
 
-Each project also has **Difficulty**, **Area**, **Time** and **Advisor** fields. Use the board's filter bar to narrow the list, for example `difficulty:Beginner area:Software`.
+Each item shows who it's for (**Requested by**), its **Priority**, and its **Start** and **Target** dates. Targets are estimates and get updated when priorities shift, so check back here instead of asking for a status update.
 
-## How to claim a project
+## Asking for something
 
-1. Open the project's card and click through to its issue.
-2. Comment on the issue: **"I'd like to take this."** Include a sentence about your background.
-3. Check with the advisor listed on the project. Once they agree, they'll assign you and move the card to **Claimed**.
-4. When you start working, move the card to **In progress**.
-5. Post short progress updates as comments on the issue (every week or two is plenty).
+Talk to Lyle directly. If it's taken on, it's added here with a target date. If it isn't, you'll hear why.
 
-Only claim **one project at a time** unless the advisor says otherwise.
+## How priorities are decided
 
-## Dropping a project
+> **Draft.** This is to be worked out with Chris and the PhD students.
 
-That's fine, it happens. Comment on the issue to say so, unassign yourself, and move the card back to **Open**. Add notes for whoever picks it up next.
+1. **Hard external deadlines** first: papers, grants, demos, sponsor deliverables.
+2. **Work blocking someone else**: whatever unblocks the most people goes ahead.
+3. **Small items** (under about an hour) are batched and done between larger pieces.
+4. **Everything else** runs first come, first served.
 
-## Finishing a project
+If two requests conflict, the people involved and Chris decide the order. The decision is reflected on the board.
 
-Link your code, CAD, write-up or demo video in a final comment, then close the issue. The card moves to **Done** on its own.
+## Adding an item (Lyle)
 
-## Proposing a new project
+```bash
+./add.sh "Rewire LE Arm wrist encoder" --for "@alice" --priority High --target 2026-11-07
+```
 
-Go to **Issues → New issue → Open project** and fill in the form. It's added to the board automatically.
+This creates the issue and puts it on the board as **Up next** with the fields filled in. Drag it to its place in the column to set its rank.

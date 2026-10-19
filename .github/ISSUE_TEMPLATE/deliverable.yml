@@ -1,0 +1,28 @@
+name: Deliverable
+description: Add an item to Lyle's deliverables queue (Lyle only)
+title: ""
+labels: ["deliverable"]
+projects: ["CU-IntelligentRoboticsLab/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Students:** please ask Lyle directly instead of filing here. He'll add it to the queue.
+        After submitting, set **Requested by**, **Priority**, **Start** and **Target** on the board.
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+      description: What's being delivered, and what does "done" look like?
+    validations:
+      required: true
+  - type: input
+    id: for
+    attributes:
+      label: For
+      placeholder: "@student, project name"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Dependencies, links, anything blocking.
