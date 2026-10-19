@@ -1,0 +1,65 @@
+name: Open project
+description: Add a project to the lab's open-project queue
+title: "[Project] "
+labels: ["project"]
+projects: ["CU-IntelligentRoboticsLab/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe a project that's available for a student to pick up.
+        After you submit it, set **Difficulty**, **Area** and **Time** on the project board.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the project and why does it matter?
+    validations:
+      required: true
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What does "done" look like?
+      placeholder: |
+        - Working prototype of ...
+        - Short write-up or demo video
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Mechanical
+        - Electrical / PCB
+        - Embedded / Firmware
+        - Software
+        - Controls
+        - Perception / ML
+  - type: input
+    id: skills
+    attributes:
+      label: Skills needed
+      placeholder: e.g. SolidWorks, KiCad, ROS 2, Python
+  - type: input
+    id: advisor
+    attributes:
+      label: Advisor / point of contact
+      placeholder: "@github-username"
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources
+      description: Links to repos, datasheets, papers, or parts in the lab.
